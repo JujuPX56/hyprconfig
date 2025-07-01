@@ -1,0 +1,33 @@
+@import "colors.scss";
+
+* {
+  all: unset;
+  background: transparent;
+  font-family: "JetBrainsMono Nerd Font";
+  opacity: 0.9;
+}
+
+.time, .date {
+  color: $on_surface;
+  background: $surface_bright;
+  border-radius: 12px;
+  font-size: 140%;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: $inverse_primary;
+}
+
+.powermenu-parent {
+  background-color: $surface_bright;
+  color: $on_surface;
+  border-radius: 12px;
+  font-size: 160%;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: $inverse_primary;
+}
+.powermenu-child {
+  color: $on_surface;
+}

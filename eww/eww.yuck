@@ -1,0 +1,63 @@
+(defpoll TIME :interval "5s" `date +\"%H:%M"`)
+(defpoll DATE :interval "10s" `date +\"%d, %B %Y"`)
+
+(defwindow time
+  :stacking "bg"
+  :monitor 0
+  :windowtype "normal"
+  :wm-ignore true
+  :geometry (geometry
+              :width "7%"
+              :height "7%"
+              :anchor "right bottom"
+              :x "5%"
+              :y "17%")
+
+  (label :text TIME :class "time")
+)
+
+(defwindow date
+  :stacking "bg"
+  :monitor 0
+  :windowtype "normal"
+  :wm-ignore true
+  :geometry (geometry
+              :width "12%"
+              :height "7%"
+              :anchor "right bottom"
+              :x "5%"
+              :y "7%")
+
+  (label :text DATE :class "date")
+)
+
+(defwindow powermenu
+  :stacking "bg"
+  :monitor 0
+  :windowtype "normal"
+  :wm-ignore true
+  :geometry (geometry
+              :width "10%"
+              :height "10%"
+              :anchor "left bottom"
+              :x "5%"
+              :y "5%")
+
+  (centerbox :height "100" :width "340" :halign "center" :valign "center" :class "powermenu-parent"
+    (box :height "100" :width "113" :halign "center" :valign "center" :class "powermenu-child"
+      (button :onclick "systemctl poweroff" :class "poweroff-button"
+        (label :class "icon-label"  :text "⏻")
+      )
+    )
+    (box :height "100" :width "113" :halign "center" :valign "center" :class "powermenu-child"
+      (button :onclick "reboot"  :class "suspend-button"
+        (label :class "icon-label"  :text "")
+      )
+    )
+    (box :height "100" :width "113" :halign "center" :valign "center" :class "powermenu-child"
+      (button :onclick "hyprctl dispatch exit" :class "button"
+        (label :class "icon-label"  :text "󰈆")
+      )
+    )
+  )
+)
