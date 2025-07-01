@@ -1,0 +1,53 @@
+[config.wallpaper]
+command = "swww"
+arguments = ["img", "--transition-type", "center"]
+set = true
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = "kitty @ set-colors -a -c ~/.config/kitty/colors.conf"
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/waybar-colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.fuzzel]
+input_path = '~/.config/matugen/templates/fuzzel.ini'
+output_path = '~/.config/fuzzel/fuzzel.ini'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.eww]
+input_path = '~/.config/matugen/templates/eww.scss'
+output_path = '~/.config/eww/colors.scss'
+
+[templates.vesktop] 
+input_path = '~/.config/matugen/templates/discord.css'
+output_path = '~/.config/vesktop/settings/quickcss.css'
+
+[templates.mako] 
+input_path = '~/.config/matugen/templates/mako'
+output_path = '~/.config/mako/config'
+post_hook = 'makoctl reload'
+
+[templates.spotify] 
+input_path = '~/.config/matugen/templates/spotify.ini'
+output_path = '~/.config/spicetify/Themes/text/color.ini'
+post_hook = 'spicetify apply'
+
+[templates.qutebrowser]
+input_path = '~/.config/matugen/templates/qutebrowser-colors.py.j2'
+output_path = '~/.config/qutebrowser/colors.py'
