@@ -9,24 +9,24 @@
 
 .time, .date {
   color: $on_surface;
-  background: $surface_bright;
+  background: $surface_container;
   border-radius: 12px;
   font-size: 140%;
 
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
-  border-color: $inverse_primary;
+  border-color: $primary;
 }
 
 .powermenu-parent {
-  background-color: $surface_bright;
+  background-color: $surface_container;
   color: $on_surface;
   border-radius: 12px;
   font-size: 160%;
 
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
-  border-color: $inverse_primary;
+  border-color: $primary;
 }
 .powermenu-child {
   color: $on_surface;
